@@ -3,6 +3,7 @@ import 'package:beehive/styles/typography.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:permission_handler/permission_handler.dart';
+import 'package:unicons/unicons.dart'; // Import Unicons
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -34,6 +35,7 @@ class HomeScreen extends StatelessWidget {
       return;
     }
 
+    // ignore: use_build_context_synchronously
     showModalBottomSheet(
       context: context,
       shape: const RoundedRectangleBorder(
@@ -50,7 +52,7 @@ class HomeScreen extends StatelessWidget {
                 children: [
                   const Text('Add to New Card', style: AppTypography.viewAllText),
                   IconButton(
-                    icon: const Icon(Icons.close, color: Color(0xFF0B2A47)),
+                    icon: const Icon(UniconsLine.times, color: Color(0xFF0B2A47)), // Use Unicons
                     onPressed: () {
                       Navigator.of(context).pop();
                     },
@@ -59,7 +61,7 @@ class HomeScreen extends StatelessWidget {
               ),
               const Divider(),
               ListTile(
-                leading: const Icon(Icons.folder, color: Color(0xFF0B2A47)),
+                leading: const Icon(UniconsLine.folder, color: Color(0xFF0B2A47)), // Use Unicons
                 title: const Text('Choose from files', style: AppTypography.businessCardSubtitle),
                 onTap: () {
                   Navigator.of(context).pop();
@@ -67,7 +69,7 @@ class HomeScreen extends StatelessWidget {
                 },
               ),
               ListTile(
-                leading: const Icon(Icons.camera_alt, color: Color(0xFF0B2A47)),
+                leading: const Icon(UniconsLine.camera, color: Color(0xFF0B2A47)), // Use Unicons
                 title: const Text('Take a Photo', style: AppTypography.businessCardSubtitle),
                 onTap: () {
                   Navigator.of(context).pop();
@@ -96,7 +98,7 @@ class HomeScreen extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
               ),
               onPressed: () => _showImageSourceDialog(context),
-              icon: const Icon(Icons.add, color: Colors.white),
+              icon: const Icon(UniconsLine.plus, color: Colors.white), // Use Unicons
               label: const Text('Add New', style: AppTypography.button),
             ),
           ],
@@ -131,7 +133,7 @@ class HomeScreen extends StatelessWidget {
                       const SizedBox(height: 16),
                       const Row(
                         children: [
-                          Icon(Icons.phone, color: Color(0xFF0B2A47)),
+                          Icon(UniconsLine.phone, color: Color(0xFF0B2A47)), // Use Unicons
                           SizedBox(width: 8),
                           Text('011 234567\n077 1234567', style: AppTypography.businessCardSubtitle),
                         ],
@@ -139,7 +141,7 @@ class HomeScreen extends StatelessWidget {
                       const SizedBox(height: 8),
                       const Row(
                         children: [
-                          Icon(Icons.email, color: Color(0xFF0B2A47)),
+                          Icon(UniconsLine.envelope_alt, color: Color(0xFF0B2A47)), // Use Unicons
                           SizedBox(width: 8),
                           Text('example@mail.com', style: AppTypography.businessCardSubtitle),
                         ],
@@ -147,7 +149,7 @@ class HomeScreen extends StatelessWidget {
                       const SizedBox(height: 8),
                       const Row(
                         children: [
-                          Icon(Icons.web, color: Color(0xFF0B2A47)),
+                          Icon(UniconsLine.globe, color: Color(0xFF0B2A47)), // Use Unicons
                           SizedBox(width: 8),
                           Text('example.com', style: AppTypography.businessCardSubtitle),
                         ],
@@ -155,7 +157,7 @@ class HomeScreen extends StatelessWidget {
                       const SizedBox(height: 8),
                       const Row(
                         children: [
-                          Icon(Icons.location_on, color: Color(0xFF0B2A47)),
+                          Icon(UniconsLine.map_marker, color: Color(0xFF0B2A47)), // Use Unicons
                           SizedBox(width: 8),
                           Text('123, nowhere st, New York, US', style: AppTypography.businessCardSubtitle),
                         ],
@@ -169,13 +171,13 @@ class HomeScreen extends StatelessWidget {
                   child: Row(
                     children: [
                       IconButton(
-                        icon: const Icon(Icons.edit, color: Color(0xFF0B2A47)),
+                        icon: const Icon(UniconsLine.edit, color: Color(0xFF0B2A47)), // Use Unicons
                         onPressed: () {
                           // Handle edit action
                         },
                       ),
                       IconButton(
-                        icon: const Icon(Icons.delete, color: Color(0xFF0B2A47)),
+                        icon: const Icon(UniconsLine.trash_alt, color: Color(0xFF0B2A47)), // Use Unicons
                         onPressed: () {
                           // Handle delete action
                         },
