@@ -28,4 +28,13 @@ class AppTypography {
     color: Colors.white,
     textBaseline: TextBaseline.alphabetic,
   );
+
+  static const TextStyle viewAllText = TextStyle(
+    fontFamily: fontFamily,
+    fontSize: 16,
+    fontWeight: FontWeight.w500,
+    height: 1.35, // This is line-height / font-size
+    color: Color(0xFF0B2A47),
+    textBaseline: TextBaseline.alphabetic,
+  );
 }
