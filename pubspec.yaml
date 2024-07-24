@@ -40,6 +40,9 @@ dependencies:
   image_picker: ^0.8.5+3
   permission_handler: ^10.2.0
   unicons: ^2.1.0  
+  firebase_core: ^2.0.0
+  firebase_auth: ^4.0.1
+  google_sign_in: ^6.0.2
   
 
 dev_dependencies:

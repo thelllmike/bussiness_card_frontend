@@ -1,4 +1,5 @@
 import 'package:beehive/screen/home_screen.dart';
+import 'package:beehive/screen/login_screen.dart';
 import 'package:flutter/material.dart';
 
 
@@ -20,7 +21,7 @@ class _SplashScreenState extends State<SplashScreen> {
     await Future.delayed(const Duration(seconds: 3), () {});
     Navigator.pushReplacement(
       context,
-      MaterialPageRoute(builder: (context) => const HomeScreen()),
+      MaterialPageRoute(builder: (context) => LoginScreen()),
     );
   }
 

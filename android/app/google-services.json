@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "1027447876926",
+    "firebase_url": "https://bussinescardditection-default-rtdb.firebaseio.com",
+    "project_id": "bussinescardditection",
+    "storage_bucket": "bussinescardditection.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1027447876926:android:3748d18d7c42a475a8506f",
+        "android_client_info": {
+          "package_name": "com.example.beehive"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAN1MVHR_GPd_mvn7y6zF6TPWmvl3c1qU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
