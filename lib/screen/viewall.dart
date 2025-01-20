@@ -93,7 +93,7 @@ class ViewAllScreen extends StatelessWidget {
                   const SizedBox(height: 8),
                   Row(
                     children: const [
-                      Icon(Icons.web, color: Color(0xFF0B2A47)),
+                      Icon(Icons.web, color: Color.fromARGB(255, 61, 66, 70)),
                       SizedBox(width: 8),
                       Expanded(
                         child: Text('example.com', style: AppTypography.businessCardSubtitle),

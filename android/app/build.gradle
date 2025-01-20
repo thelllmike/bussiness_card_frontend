@@ -70,5 +70,10 @@ flutter {
     source '../..'
 }
 
-dependencies {}
+dependencies {
+    // Image Cropper Dependencies
+    implementation 'com.github.yalantis:ucrop:2.2.8' // Required for image_cropper plugin
+
+    // Other dependencies can go here
+}
 apply plugin: 'com.google.gms.google-services'
