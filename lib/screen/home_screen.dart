@@ -3,6 +3,8 @@ import 'package:image_picker/image_picker.dart';
 import 'package:image_cropper/image_cropper.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:unicons/unicons.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:beehive/screen/login_screen.dart'; // Import the LoginScreen
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -121,6 +123,16 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
+  void _signOut(BuildContext context) async {
+    await FirebaseAuth.instance.signOut();
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(content: Text('Signed out successfully.')),
+    );
+    Navigator.of(context).pushReplacement(
+      MaterialPageRoute(builder: (context) => const LoginScreen()),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -138,6 +150,28 @@ class HomeScreen extends StatelessWidget {
               onPressed: () => _showImageSourceDialog(context),
               icon: const Icon(UniconsLine.plus, color: Colors.white),
               label: const Text('Add New', style: AppTypography.button),
+            ),
+            PopupMenuButton(
+              icon: const CircleAvatar(
+                backgroundImage: AssetImage('assets/profile_image.png'), // Replace with dynamic image
+              ),
+              itemBuilder: (context) => [
+                PopupMenuItem(
+                  value: 'signout',
+                  child: Row(
+                    children: const [
+                      Icon(UniconsLine.sign_out_alt, color: Color(0xFF0B2A47)),
+                      SizedBox(width: 8),
+                      Text('Sign Out', style: AppTypography.businessCardSubtitle),
+                    ],
+                  ),
+                ),
+              ],
+              onSelected: (value) {
+                if (value == 'signout') {
+                  _signOut(context);
+                }
+              },
             ),
           ],
         ),
